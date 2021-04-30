@@ -1,10 +1,19 @@
-// const omdbQuery = (
-
-// ) => {
-//     return {
-//         query:`
-//         `
-//     }
-// }
-
-// export default omdbQuery;
+const query = (
+    pageCount, 
+    queryString
+    ) => {
+  
+      return {
+        query: `
+        {
+          viewer {
+            title
+            year
+            imdbID
+            type
+            poster
+          }
+        }
+      `,
+      };
+    };
