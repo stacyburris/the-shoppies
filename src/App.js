@@ -1,74 +1,70 @@
-//import { useCallback, useEffect } from "react";
-import info from "./db.js";
-import { useEffect} from "react";
-//import query from "./Query";
-
+//import React from 'react';
+import SearchBox from './components/SearchBox';
+import { API_KEY } from './requirements';
+import { useState, useEffect, useCallback } from 'react';
+import MovieList from './components/MovieList';
+//import { Button } from 'bootstrap';
+//import Container from 'react-bootstrap/Container'
+//import Row from 'react-bootstrap/Row'
+// import query from './Query';
+//import info from "./db.js";
+//import { useEffect} from "react";
+//import MovieList from './components/MovieList';
 function App() {
-useEffect(() => {
-  const omdbQuery = {
-    query: `
-    {
-      viewer {
-        type
-      }
-    }
-    `,
-  };
-  // `${OMDB_URL}${query}&page=${page}`
-  fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${info.KEY}&`, {
+
+  let [pageCount, setPageCount] = useState(20);
+  let [queryString, setQueryString] = useState('');
+
+
+const fetchMovieData = useCallback(() => {
+  console.log("here");
+  // const queryText = JSON.stringify(
+  //   query(pageCount, queryString)
+  // );
+
+  fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=title`, {
     method: "POST",
-  //   headers: {
-  //    'Content-Type': 'application/json',
-  //  },
-    // headers: key.headers,
-    body: JSON.stringify(omdbQuery)
+    //body: queryText,
   })
-  .then(response => response.json())
-  .then(data => {
-    console.log('DATA:-----', data);
-  })
-  .catch( err => {
-    console.log(err)
-  })
-});
+  .then((response) => response.json())
+  .then((data) => {
+console.log('----------', data);
 
 
-  return (
-    <div className="App">
-{/* <SearchBox
- queryString={queryString}
-/> */}
-    </div>
-  );
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+}, []);
+
+useEffect(() => {
+fetchMovieData();
+
+}, [fetchMovieData]);
+
+
+return (
+  <div className="App">
+   
+
+      <SearchBox
+             
+          pageCount={pageCount}
+          queryString={queryString}
+          onTotalChange={(myNumber) => {
+          setPageCount(myNumber);
+          }}
+          onQueryChange={(myString) => {
+            setQueryString(myString);
+          }}
+      />
+      <button>Click</button>
+          
+     {/* <MovieList /> */}
+  </div>
+);
 }
+
 
 export default App;
 
-
-
-// fetch('https://www.learnwithjason.dev/graphql', {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json',
-//   },
-//   body: JSON.stringify({
-//     query: `
-//         query GetLearnWithJasonEpisodes($now: DateTime!) {
-//           allEpisode(limit: 10, sort: {date: ASC}, where: {date: {gte: $now}}) {
-//             date
-//             title
-//             guest {
-//               name
-//               twitter
-//             }
-//             description
-//           }
-//         }
-//       `,
-//     variables: {
-//       now: new Date().toISOString(),
-//     },
-//   }),
-// })
-//   .then((res) => res.json())
-//   .then((result) => console.log(result));
