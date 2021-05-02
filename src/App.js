@@ -1,70 +1,65 @@
-//import React from 'react';
-import SearchBox from './components/SearchBox';
+import React, { useState, useEffect, useCallback } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import MovieList from './components/MovieList'; // importing the list of Movies 
+import Header from './components/Header/Header'; // importing header component
+import SearchBar from './components/SearchBar/SearchBar'; // importing searchbar component
+import AddNomination from './components/Nominations/nominations'; // importing nomination component
+
+
 import { API_KEY } from './requirements';
-import { useState, useEffect, useCallback } from 'react';
-import MovieList from './components/MovieList';
-//import { Button } from 'bootstrap';
-//import Container from 'react-bootstrap/Container'
-//import Row from 'react-bootstrap/Row'
-// import query from './Query';
-//import info from "./db.js";
-//import { useEffect} from "react";
-//import MovieList from './components/MovieList';
-function App() {
+const App = () => {
+	const [movies, setMovies] = useState([]); // uses state to get and set movies 
+  const [searchMovie, setSearchMovie] = useState(''); // state for what the user types in the search bar
+  const [nominate, setNominate] = useState([]);
 
-  let [pageCount, setPageCount] = useState(20);
-  let [queryString, setQueryString] = useState('');
+  const fetchMovieData = async (searchMovie) => {
+    const omdbUrl = `http://www.omdbapi.com/?s=${searchMovie}&apikey=${API_KEY}`;
 
+    const response = await fetch(omdbUrl);
+		const dataReceived = await response.json();
+    console.log('Data received:', dataReceived); // from console data is stored inside .Search
+		if (dataReceived.Search) {
+			setMovies(dataReceived.Search);
+		}
+  };
 
-const fetchMovieData = useCallback(() => {
-  console.log("here");
-  // const queryText = JSON.stringify(
-  //   query(pageCount, queryString)
-  // );
+  const nominateMovie = (movie) => {
+		const newNominateList = [...nominate, movie];
+		setNominate(newNominateList);
+	};
 
-  fetch(`http://www.omdbapi.com/?apikey=${API_KEY}&s=title`, {
-    method: "POST",
-    //body: queryText,
-  })
-  .then((response) => response.json())
-  .then((data) => {
-console.log('----------', data);
+  // API call only happens when the app loads for the first time
+  useEffect(() => {
+		fetchMovieData(searchMovie);
+	}, [searchMovie]); 
 
 
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-}, []);
 
-useEffect(() => {
-fetchMovieData();
-
-}, [fetchMovieData]);
-
-
-return (
-  <div className="App">
-   
-
-      <SearchBox
-             
-          pageCount={pageCount}
-          queryString={queryString}
-          onTotalChange={(myNumber) => {
-          setPageCount(myNumber);
-          }}
-          onQueryChange={(myString) => {
-            setQueryString(myString);
-          }}
-      />
-      <button>Click</button>
-          
-     {/* <MovieList /> */}
-  </div>
-);
-}
-
+	 // <MovieList movies={movies} /> Rendering list of movies and passing movies stored in state as props
+   // <Header />
+   // <SearchBar searchValue={search} setSearchValue={setSearch} /> // gets & sets search value
+	return (
+  <div className='container-fluid movie-app'>
+			<div className='row d-flex align-items-center mt-4 mb-4'>
+				<Header heading='The Shoppies' />  
+				<SearchBar searchMovie={searchMovie} setSearchMovie={setSearchMovie} />
+			</div>
+			<div className='row'>
+				<MovieList 
+        movies={movies} 
+        NominateComponent={AddNomination} 
+        handleNominateClick={nominateMovie}
+        />
+			</div>
+      <div className='row d-flex align-items-center mt-4 mb-4'>
+				<Header heading='Nominate' />
+			</div>
+			<div className='row'>
+				<MovieList movies={nominate} NominateComponent={AddNomination} />
+			</div>
+		</div>
+	);
+};
 
 export default App;
-
