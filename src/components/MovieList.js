@@ -1,5 +1,5 @@
 import React from 'react';
-import AddNomination from './Nominations/nominations';
+//import AddNomination from './Nominations/nominations';
 
 const MovieList = (props) => {
     const NominateComponent = props.NominateComponent;
