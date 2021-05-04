@@ -1,0 +1,31 @@
+#input-with-icon-adornment {
+  color: white;
+  //padding-right: 100px;
+
+  ::placeholder {
+    width: fit-content;
+  }
+  //
+}
+.nav-color {
+  background-color: rgb(65, 62, 202);
+  .mr-sm-2 {
+    color: white;
+  }
+  .input-container {
+    display: inline-block;
+    margin-bottom: 2em;
+  }
+
+  .input {
+    display: inline;
+    width: 100%;
+    font-size: 16px;
+    font-family: Times;
+  }
+
+  .input-hidden-label {
+    height: 0;
+    visibility: hidden;
+  }
+}

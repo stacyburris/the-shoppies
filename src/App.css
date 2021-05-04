@@ -1,12 +1,12 @@
 body {
-  background: #141414;
+  background: #e4a7a7;
   color: #ffffff;
 }
 
-.movie-app > .row {
+/* .movie-app > .row {
   overflow-x: auto;
   flex-wrap: nowrap;
-}
+} */
 .image-container {
   position: relative;
   transition: transform 0.2s;
