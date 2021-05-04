@@ -35,11 +35,13 @@ const NominateButton = (props) => {
     )
 }, [nominations, id]); // Updates on Nomination Change
 
+
+//disabled={isNominated}  // this goes after the onClick={()}
     return (
         <button 
-        className="nom-button" 
+        className='nominate-button' 
         onClick={() => addMovieNomination()} 
-        disabled={isNominated}>
+        >
         <span 
             className='mr-2'>
             {isNominated ? inactiveSelection : activeSelection}

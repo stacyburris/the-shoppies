@@ -1,6 +1,5 @@
 import React from 'react';
-
-//import SearchBar from '../SearchBar/SearchBar'; // importing searchbar component
+import SearchBar from '../SearchBar/SearchBar'; // importing searchbar component
 
 // TODO: put bootstrap to make a better header
 const Header = (props) => {
@@ -8,9 +7,12 @@ const Header = (props) => {
 <>
 		<div className='col'>
 			<h1>{props.heading}</h1>
-		</div>
+		</div>	
+		<SearchBar />
 		</>
 	);
 };
 
 export default Header;
+
+//searchMovie={searchMovie} setSearchMovie={setSearchMovie} 
