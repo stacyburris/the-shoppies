@@ -7,7 +7,8 @@ const Nominations = (props) => {
 // clearNominations set to empty array and clear local storage
     const { nominations, removeNominatedMovie, clearNominations } = props
     const nominationsLeft = 5 - nominations.length
- 
+    
+ // Tracks Nominations
     return(
         <div>
             <h3 className='sub-header'>Nominations {nominations.length >= 1 ? <Button onClick={clearNominations} variant='dark'>Clear Nominations</Button> : null }</h3>

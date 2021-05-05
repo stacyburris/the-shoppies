@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Spinner, Col, Card }from 'react-bootstrap';
-
+// Spinner creates a loading feature 
 
 const MovieList = (props) => {
 	// movie = passed (movie)
@@ -8,6 +8,8 @@ const MovieList = (props) => {
 	// nominations = state in local storage
 	const {movie, addNominatedMovie, nominations} = props;
 
+  // If There Is Movies, Display Cards With Poster Picture and Title : Else Display a Loading Spinner From Bootstrap
+  // If Movie is Selected and User Has Not Reached 5 Choices, Buttons Will Remain Clickable With Nominate, : Else DISABLE BUTTON
 	return(
 		<div>
 			{movie ?
