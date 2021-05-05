@@ -9,10 +9,11 @@ const NominationsComplete = () => {
   const handleSubmit = () => {
     setShow(false)
   }
+ 
   return (
     <>
       <Modal contentClassName='modal' centered='true' show={show} onHide={handleSubmit}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title className='modal-title'>Congratulations! </Modal.Title>
         </Modal.Header>
         <Modal.Body>
