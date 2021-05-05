@@ -1,9 +1,10 @@
 import React,  { useState, useEffect } from 'react'
-import MovieList from '../MovieList';
+import MovieList from '../MovieList/movieList';
 import Nomination from '../Nominations/nominations';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { API_KEY } from '../../requirements'; // Imports Needed Requirements
-//import AlertModel from '../Alerts/alerts';
+import NominationsComplete from '../Alerts/nominationComplete';
+import './main.scss';
 
 const Main = () => {
  
@@ -25,22 +26,25 @@ localStorage.setItem('nominations', JSON.stringify(nominations));
 
   // Handles Movie Searches
   const movieSearchHandler = (e) => {
+    console.log('Search Works', e.target.value)
     setMovieSearch(e.target.value);
 }
 // Fetches Data From OMDB API With Error CHecking
-// TODO: Incorporate MOdel or Alert BootStrap Here
+// TODO: Incorporate Model or Alert BootStrap Here
   const fetchMovieData = (e) => {
     e.preventDefault();
+    //console.log({fetchMovieData})
     if(movieSearch.length === 0){
-      alert('Please Type to Search!')
+      alert('Please Enter a Movie Title!')
     } else 
     fetch(`http://www.omdbapi.com/?s=${movieSearch}&apikey=${API_KEY}`)
+
     .then(res => res.json())
+     
     .then(movies => setMovies(movies.Search))
     .catch(err => {
       console.error(err)
         alert('Error Something Went Wrong!')
-      
     })
 
     // OLD CODE 
@@ -76,6 +80,7 @@ const removeNominatedMovie = (movie) => {
   }
 // Sorts Movies By Year
 const sortMovies = movies.sort((a,b) => a.Year - b.Year)
+console.log({movies}, {sortMovies})
 
 // If Nominations === 5 Alert User They Have Picked Max Nominations
 // COntainer --> Form --> Fetch Data --> Search For Movie 
@@ -86,25 +91,25 @@ const sortMovies = movies.sort((a,b) => a.Year - b.Year)
 // Nomination Component
 return(
   <div>
-           {nominations.length === 5 ? <div>Put Model Component Here</div> : ''}
+           {nominations.length === 5 ? <NominationsComplete/> : ''}
             <Container>
                 <Form className='input-data' onSubmit={fetchMovieData}>
                     <Form.Group>
-                        <Form.Label className='title'>Movie Title</Form.Label>
+                        <Form.Label className='title'>Welcome To The Movie Awards 🏆</Form.Label>
                         <Form.Control onChange={movieSearchHandler} value={movieSearch} type='text' placeholder='Type to Search for a Movie...' />
                     </Form.Group>
-                    <Button onClick={removeHandler} variant='dark'> Clear Search</Button>
+                    <Button variant='primary' onClick={removeHandler} > Clear Search</Button>
                 </Form>
             </Container>
             <Container className='movie-nominations'>
                 <Row>
                     <Col md='8'>
                         <div>
-                            <h3 className='sub-header'>Movies</h3>
+                            <h2 className='sub-header'>Movies</h2>
                             {movies.length > 0 ? 
-                                <h5 className='nominationsLeft'>Search Results for {movieSearch}</h5> 
+                                <h4 className='movie-search'>Search Results for {movieSearch}</h4> 
                                 : 
-                                <h5 className='nominationsLeft'>Search Results</h5> 
+                                <h4 className='movie-results'>Search Results</h4> 
                             }
                             <div className='movies'>  
                                 {movies.length > 0 ? 
