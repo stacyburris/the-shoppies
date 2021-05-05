@@ -13,9 +13,6 @@ import {
 
 const Footer = () => {
   
-    const [show, setShow] = useState(false);
-    const target = useRef(null);
-//  <FontAwesomeIcon icon={faMailchimp} size="2x"/>
   return (
 
     <div className="Footer" >

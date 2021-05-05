@@ -1,4 +1,3 @@
-import { Hidden } from '@material-ui/core'
 import React from 'react'
 import { Media } from 'react-bootstrap'
 import './nominations.scss';
