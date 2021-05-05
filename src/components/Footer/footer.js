@@ -1,4 +1,3 @@
-import React, { useState, useRef } from 'react';
 import '../Footer/footer.scss';
 import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
