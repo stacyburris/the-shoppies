@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from './components/Main/Main'; // imports main components where API is called
+import Main from './components/Main/main'; // imports main components where API is called
 import {Jumbotron } from 'react-bootstrap'; // Bootstrap to create the header container 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
@@ -15,6 +15,7 @@ const App = () => {
         </h1>
       </Jumbotron>
       <Main />
+      
     </div>
   )
 }

@@ -1,10 +1,10 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
-
-body {
-  background: #e4a7a7;
-  color: #ffffff;
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP&family=Nunito&family=Open+Sans&display=swap");
+$bodyFont: "Open Sans", sans-serif;
+* {
+  background: rgb(23, 23, 22);
+  color: whitesmoke;
 }
 .jumbotron {
   background-color: #bac2ee;
@@ -12,18 +12,28 @@ body {
   background-size: cover;
   background-repeat: inherit;
   .header {
-    font-family: -apple-system, Helvetica, sans-serif;
-    //font-family: "Noto Sans JP", sans-serif;
+    font-family: "Lato", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Nunito", sans-serif;
     font-size: 5vw;
-    padding-left: 100px;
+    padding-left: 110px;
     background-color: transparent;
   }
   .film-strip {
     height: 40px;
     width: 35px;
-    color: black;
+    background-color: transparent;
   }
+  .modal-title {
+    font-family: $bodyFont;
+  }
+  //   .button-color {
+  //     background-color: silver;
+  //   }
 }
+// .first-countdown {
+//   visibility: hidden;
+// }
 
 /* .movie-app > .row {
   overflow-x: auto;
