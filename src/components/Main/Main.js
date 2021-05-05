@@ -1,13 +1,18 @@
 import React,  { useState, useEffect } from 'react'
 import MovieList from '../MovieList/movieList';
 import Nomination from '../Nominations/nominations';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { Form, Container, Row, Col } from 'react-bootstrap';
 import { API_KEY } from '../../requirements'; // Imports Needed Requirements
 import NominationsComplete from '../Alerts/nominationComplete';
 import './main.scss';
 
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import { purple } from '@material-ui/core/colors';
+
+
 const Main = () => {
- 
+
   const [movieSearch, setMovieSearch] = useState(''); // State For User Movie Search in Search Bar
   const [movies, setMovies] = useState([]); // Uses State To Get And Set Movies 
   // Uses State for LocalStorage (Nominations) or Fall Back Empty Array []
@@ -82,6 +87,25 @@ const removeNominatedMovie = (movie) => {
 const sortMovies = movies.sort((a,b) => a.Year - b.Year)
 console.log({movies}, {sortMovies})
 
+
+
+const ColorButton = withStyles((theme) => ({
+  root: {
+    color: theme.palette.getContrastText(purple[500]),
+    backgroundColor: purple[500],
+    '&:hover': {
+      backgroundColor: purple[700],
+    },
+  },
+}))(Button);
+
+
+
+const useStyles = makeStyles((theme) => ({
+  margin: {
+    margin: theme.spacing(1),
+  },
+}));
 // If Nominations === 5 Alert User They Have Picked Max Nominations
 // COntainer --> Form --> Fetch Data --> Search For Movie 
 // RemoveHandler === Clear Search // Resets State
@@ -89,7 +113,9 @@ console.log({movies}, {sortMovies})
 // Display Sorted Selected Movies Else Null
 // MovieList Component 
 // Nomination Component
+const classes = useStyles();
 return(
+  
   <div>
            {nominations.length === 5 ? <NominationsComplete/> : ''}
             <Container>
@@ -98,7 +124,9 @@ return(
                         <Form.Label className='title'>Welcome To The Movie Awards 🏆</Form.Label>
                         <Form.Control onChange={movieSearchHandler} value={movieSearch} type='text' placeholder='Type to Search for a Movie...' />
                     </Form.Group>
-                    <Button variant='primary' onClick={removeHandler} > Clear Search</Button>
+                    <ColorButton variant="contained" color="primary" className={classes.margin} onClick={removeHandler}>
+                      Clear Search
+                  </ColorButton>
                 </Form>
             </Container>
             <Container className='movie-nominations'>

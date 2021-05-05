@@ -24,7 +24,7 @@ const MovieList = (props) => {
                             src={movie.Poster}
                             alt={movie.Title}
                         />
-                        <Card.Text>Movie Title: {movie.Title}</Card.Text>
+                        <Card.Text>{movie.Title}</Card.Text>
                         <Card.Text>Release Year:<i> {movie.Year}</i></Card.Text>
                         {nominations.includes(movie) || nominations.length === 5 ? 
                             <Button variant='primary' disabled >Nominated</Button>

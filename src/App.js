@@ -4,10 +4,12 @@ import {Jumbotron } from 'react-bootstrap'; // Bootstrap to create the header co
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import MovieFilterIcon from '@material-ui/icons/MovieFilter'; // Material UI Icon
+import Footer from './components/Footer/footer';
 
 // This function renders the title as well as the main component 
 const App = () => {
   return (
+    <>
     <div className='app'>
       <Jumbotron className='jumbotron'> 
         <h1 className='header'>
@@ -15,8 +17,10 @@ const App = () => {
         </h1>
       </Jumbotron>
       <Main />
-      
+    
     </div>
+      <Footer/>
+</>
   )
 }
 export default App;

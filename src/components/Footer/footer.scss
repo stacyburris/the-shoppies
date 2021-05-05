@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap");
+$bodyFont: "Open Sans", sans-serif;
+
+.Footer {
+  background: rgb(23, 23, 22);
+  font-family: $bodyFont;
+  color: whitesmoke;
+  a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  #site-info {
+    text-align: center;
+    font-family: $bodyFont;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5vw;
+    letter-spacing: 2px;
+  }
+  h3 {
+    text-align: center;
+    font-size: 1.5vw;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    font-family: $bodyFont;
+  }
+  .heart {
+    margin: 0px 6px 0px 6px;
+  }
+}
+#icon {
+  margin: 20px 10px 20px 10px;
+}
+.contact-link {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+// .cta-btn {
+//   display: inline-block;
+//   position: relative;
+//   padding: 0.8rem;
+//   font-weight: bold;
+//   line-height: 1;
+//   z-index: 1;
+//   opacity: 0.6;
+//   //background-color: white;
+//   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+
+//   .cta-btn:hover {
+//     content: "";
+//     display: block;
+//     //position: absolute;
+//     width: 0px;
+//     height: 100%;
+//     z-index: -1;
+//     opacity: 1;
+//     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+//   }
+
+// .cta-btn {
+//   width: 200px;
+//   background: white;
+//   font-size: 40px;
+//   margin: 100px auto;
+//   padding: 10px;
+//   cursor: pointer;
+// }
+// .cta-btn:hover {
+//   opacity: 0.3;
+// }
