@@ -42,7 +42,7 @@ localStorage.setItem('nominations', JSON.stringify(nominations));
     if(movieSearch.length === 0){
       alert('Please Enter a Movie Title!')
     } else 
-    fetch(`http://www.omdbapi.com/?s=${movieSearch}&apikey=${API_KEY}`)
+    fetch(`https://www.omdbapi.com/?s=${movieSearch}&apikey=${API_KEY}`)
 
     .then(res => res.json())
      
