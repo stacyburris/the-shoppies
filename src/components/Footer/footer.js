@@ -1,5 +1,5 @@
 import '../Footer/footer.scss';
-import Button from 'react-bootstrap/Button';
+import MyButton from '../../Reusables/buttons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import {
@@ -11,25 +11,18 @@ import {
 
 
 const Footer = () => {
-  
   return (
-
     <div className="Footer" >
       <footer>
-        {/* <hr /> */}
         <h3>Made with<span><FontAwesomeIcon 
         className='heart' icon={farHeart} size="1x" />
         <span>by Stacy Burris</span></span>
        </h3>
         <div id="site-info">
         <p id="Footer">
-        
           <p>Connect With Me</p>
-          <Button variant="outline-primary" size="md"><a className='cta-btn' 
-       href="mailto:stacy1burris@gmail.com">Email</a></Button>
-
-          {/* <button></button> */}
-       
+          <MyButton><a
+       href="mailto:stacy1burris@gmail.com">Email</a></MyButton>
            </p>
         </div>
        <div className="contact-link">
@@ -52,7 +45,6 @@ const Footer = () => {
           </div>
       </footer>
     </div>
-  
   );
 }
 

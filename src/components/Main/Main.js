@@ -4,19 +4,12 @@ import Nomination from '../Nominations/nominations';
 import { Form, Container, Row, Col } from 'react-bootstrap';
 import { API_KEY } from '../../requirements'; // Imports Needed Requirements
 import NominationsComplete from '../Alerts/nominationComplete';
+import MyButton from '../../Reusables/buttons';
 import './main.scss';
 
-import { withStyles, makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import { purple } from '@material-ui/core/colors';
 
 
-// const result = dotenv.config()
-
-// if (result.error) {
-//   throw result.error
-// } 
-// console.log(result.parsed)
+require('dotenv').config();
 
 const Main = () => {
 
@@ -45,7 +38,6 @@ localStorage.setItem('nominations', JSON.stringify(nominations));
 // TODO: Incorporate Model or Alert BootStrap Here
   const fetchMovieData = (e) => {
     e.preventDefault();
-    //console.log({fetchMovieData})
     if(movieSearch.length === 0){
       alert('Please Enter a Movie Title!')
     } else 
@@ -59,13 +51,7 @@ localStorage.setItem('nominations', JSON.stringify(nominations));
         alert('Error Something Went Wrong!')
     })
 
-    // OLD CODE 
-    // const response = await fetch(omdbUrl);
-	  // const dataReceived = await response.json();
-    // console.log('Data received:', dataReceived.Search); // from console data is stored inside .Search
-		// if (dataReceived.Search) {
-		// 	setMovies(dataReceived.Search);
-		// }
+
 }
 // Resets State If Clear Search Button is Clicked
 const removeHandler = () => {
@@ -95,24 +81,6 @@ const sortMovies = movies.sort((a,b) => a.Year - b.Year)
 console.log({movies}, {sortMovies})
 
 
-
-const ColorButton = withStyles((theme) => ({
-  root: {
-    color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: purple[500],
-    '&:hover': {
-      backgroundColor: purple[700],
-    },
-  },
-}))(Button);
-
-
-
-const useStyles = makeStyles((theme) => ({
-  margin: {
-    margin: theme.spacing(1),
-  },
-}));
 // If Nominations === 5 Alert User They Have Picked Max Nominations
 // COntainer --> Form --> Fetch Data --> Search For Movie 
 // RemoveHandler === Clear Search // Resets State
@@ -120,7 +88,6 @@ const useStyles = makeStyles((theme) => ({
 // Display Sorted Selected Movies Else Null
 // MovieList Component 
 // Nomination Component
-const classes = useStyles();
 return(
   
   <div>
@@ -131,9 +98,9 @@ return(
                         <Form.Label className='title'>Welcome To The Movie Awards 🏆</Form.Label>
                         <Form.Control onChange={movieSearchHandler} value={movieSearch} type='text' placeholder='Type to Search for a Movie...' />
                     </Form.Group>
-                    <ColorButton variant="contained" color="primary" className={classes.margin} onClick={removeHandler}>
+                    <MyButton onClick={removeHandler}>
                       Clear Search
-                  </ColorButton>
+                  </MyButton>
                 </Form>
             </Container>
             <Container className='movie-nominations'>
@@ -170,9 +137,6 @@ return(
                 </Row>
             </Container>    
         </div>
-    
 )
-
-
 }
 export default Main;

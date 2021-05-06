@@ -6,7 +6,7 @@ import './App.scss';
 import MovieFilterIcon from '@material-ui/icons/MovieFilter'; // Material UI Icon
 import Footer from './components/Footer/footer';
 
-// This function renders the title as well as the main component 
+// Renders Function for Header, Main, Footer
 const App = () => {
   return (
     <>

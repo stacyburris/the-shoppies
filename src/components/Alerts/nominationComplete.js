@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
-import '../../App.scss';
+import { Modal } from 'react-bootstrap';
+import '../Alerts/alert.scss';
+import MyButton from '../../Reusables/buttons';
 
 const NominationsComplete = () => {
 
@@ -9,10 +10,9 @@ const NominationsComplete = () => {
   const handleSubmit = () => {
     setShow(false)
   }
- 
   return (
     <>
-      <Modal contentClassName='modal' centered='true' show={show} onHide={handleSubmit}>
+      <Modal className='alert-modal' centered='true' show={show} onHide={handleSubmit}>
         <Modal.Header>
           <Modal.Title className='modal-title'>Congratulations! </Modal.Title>
         </Modal.Header>
@@ -20,9 +20,10 @@ const NominationsComplete = () => {
           You've Finished Nominating Movies 🏆 
         </Modal.Body>
         <Modal.Footer>
-          <Button className='nominate' onClick={handleSubmit}>
-            Close
-          </Button>
+          <MyButton
+            className='nominate' onClick={handleSubmit}>
+               Close
+            </MyButton> 
         </Modal.Footer>
       </Modal>
     </>

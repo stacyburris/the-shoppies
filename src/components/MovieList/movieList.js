@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Spinner, Col, Card }from 'react-bootstrap';
+import MyButton from '../../Reusables/buttons';
 import './movieList.scss';
 // Spinner creates a loading feature 
 
@@ -27,9 +28,9 @@ const MovieList = (props) => {
                         <Card.Text>{movie.Title}</Card.Text>
                         <Card.Text>Release Year:<i> {movie.Year}</i></Card.Text>
                         {nominations.includes(movie) || nominations.length === 5 ? 
-                            <Button variant='primary' disabled >Nominated</Button>
+                            <MyButton disabled >Nominated</MyButton>
                             : 
-                            <Button className='nominate' variant='primary' onClick={() => addNominatedMovie(movie)}>Nominate Movie</Button>
+                            <MyButton className='nominate' onClick={() => addNominatedMovie(movie)}>Nominate Movie</MyButton>
                         }
 				</Card>
 			</Col>
