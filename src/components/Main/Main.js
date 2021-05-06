@@ -11,6 +11,13 @@ import Button from '@material-ui/core/Button';
 import { purple } from '@material-ui/core/colors';
 
 
+// const result = dotenv.config()
+
+// if (result.error) {
+//   throw result.error
+// } 
+// console.log(result.parsed)
+
 const Main = () => {
 
   const [movieSearch, setMovieSearch] = useState(''); // State For User Movie Search in Search Bar
