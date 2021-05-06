@@ -19,7 +19,7 @@ const MovieList = (props) => {
 			<Col>
 			<Card className='movie-card' style={{ width: '15rem' }} bg='dark' text='dark'>
 			<Card.Img
-                            width={60}
+                            width={70}
                             height={285}
                             className="mr-3"
                             src={movie.Poster}

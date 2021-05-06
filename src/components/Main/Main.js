@@ -6,9 +6,6 @@ import { API_KEY } from '../../requirements'; // Imports Needed Requirements
 import NominationsComplete from '../Alerts/nominationComplete';
 import MyButton from '../../Reusables/buttons';
 import './main.scss';
-
-
-
 require('dotenv').config();
 
 const Main = () => {
@@ -34,8 +31,8 @@ localStorage.setItem('nominations', JSON.stringify(nominations));
     console.log('Search Works', e.target.value)
     setMovieSearch(e.target.value);
 }
-// Fetches Data From OMDB API With Error CHecking
-// TODO: Incorporate Model or Alert BootStrap Here
+//Fetches Data From API With Error CHecking
+//TODO: Incorporate Model or Alert BootStrap Here
   const fetchMovieData = (e) => {
     e.preventDefault();
     if(movieSearch.length === 0){
@@ -46,13 +43,108 @@ localStorage.setItem('nominations', JSON.stringify(nominations));
     .then(res => res.json())
      
     .then(movies => setMovies(movies.Search))
-    .catch(err => {
-      console.error(err)
-        alert('Error Something Went Wrong!')
+    .catch((error) => {
+      console.error('Error:', error);
     })
-
-
+    
 }
+
+
+
+// const fetchMovieData = (e) => {
+//   e.preventDefault();
+//   if(movieSearch.length === 0){
+//     alert('Please Enter a Movie Title!')
+//   } else 
+// fetch(`https://www.omdbapi.com/?s=${movieSearch}&apikey=${API_KEY}`, {
+//             method: 'GET',
+//             headers: {
+//                 'Accept': 'application/json'
+//             }
+//         })
+//             .then(result => {
+//                 if (!result.ok) throw result;
+//                 return result.json();
+//             })
+//             .then(result => {
+//                 console.log(result);
+//                 result.setMovies(result.Search)({
+//                     isLoaded: true,
+//                     error: null
+//                 });
+//             }).catch(error => {
+//                 console.log("Error occurred");
+//                 try {
+//                     error.json().then(body => {
+//                         //Here is already the payload from API
+//                         console.log(body);
+//                         console.log("message = "+body.message);
+//                         setMovies(body.Search)({
+//                             isLoaded: true,
+//                             error: body
+//                         });
+//                     });
+//                 } catch (e) {
+//                     console.log("Error parsing promise");
+//                     console.log(error);
+                   
+//                     // setMovies()({
+//                     //     isLoaded: true,
+//                     //     error: error
+//                     // });
+//                 } 
+//             });
+//           }
+
+//////////////////////
+
+// handleSubmit(e) {
+//   e.preventDefault()
+
+//   const body = {
+//     email: this.state.email,
+//   }
+
+//   let resStatus = 0
+//   fetch(Config.REST_API_URL + 'users/registration-request', {
+//     method: 'POST',
+//     headers: {
+//       Accept: 'application/json',
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(body),
+//   })
+//   .then(res => {
+//     resStatus = res.status
+//     return res.json()
+//   })
+//   .then(res => {
+//     switch (resStatus) {
+//       case 201:
+//         console.log('success')
+//         break
+//       case 400:
+//         if (res.code === 'ValidationFailed') {
+//           // My custom error messages from the API.
+//           console.log(res.fieldMessages)
+//         } else {
+//           console.log('this is a client (probably invalid JSON) error, but also might be a server error (bad JSON parsing/validation)')
+//         }
+//         break
+//       case 500:
+//         console.log('server error, try again')
+//         break
+//       default:
+//         console.log('unhandled')
+//         break
+//     }
+//   })
+//   .catch(err => {
+//     console.error(err)
+//   })
+// }
+
+
 // Resets State If Clear Search Button is Clicked
 const removeHandler = () => {
   setMovies([]);
@@ -78,7 +170,7 @@ const removeNominatedMovie = (movie) => {
   }
 // Sorts Movies By Year
 const sortMovies = movies.sort((a,b) => a.Year - b.Year)
-console.log({movies}, {sortMovies})
+//console.log({movies}, {sortMovies})
 
 
 // If Nominations === 5 Alert User They Have Picked Max Nominations
@@ -109,9 +201,9 @@ return(
                         <div>
                             <h2 className='sub-header'>Movies</h2>
                             {movies.length > 0 ? 
-                                <h4 className='movie-search'>Search Results for {movieSearch}</h4> 
+                                <h4 className='results'>Search Results for {movieSearch}</h4> 
                                 : 
-                                <h4 className='movie-results'>Search Results</h4> 
+                                <h4 className='results'>Search Results</h4> 
                             }
                             <div className='movies'>  
                                 {movies.length > 0 ? 

@@ -22,9 +22,9 @@ const Nominations = (props) => {
                       Clear Nominations</MyButton> : null }</h2>
 
             {nominationsLeft > 0 ? 
-                <h4 className='first-countdown'>You have ({nominationsLeft}) {nominationsLeft === 1 ? 'nomination' : 'nominations'} left</h4>
+                <h4 className='results'>You have {nominationsLeft} {nominationsLeft === 1 ? 'nomination' : 'nominations'} left</h4>
                 :
-                <h4 className='noms-left'>You Nominated 5 Movies!</h4>
+                <h4 className='results'>You Nominated 5 Movies!</h4>
             } 
 
             {nominations.length > 0 ?
@@ -32,7 +32,7 @@ const Nominations = (props) => {
                     <div className='nominations'>
                         <Media>
                             <img
-                                width={68}
+                                width={75}
                                 className="mr-3"
                                 src={nominate.Poster}
                                 alt={nominate.Title}

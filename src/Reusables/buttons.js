@@ -1,18 +1,18 @@
 import React from "react";
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import { purple } from '@material-ui/core/colors';
+import { cyan } from '@material-ui/core/colors';
 import './buttons.scss';
 
    const styles = () => ({
     root: {
-      color: purple[500],
-      backgroundColor: purple[500],
+      color: cyan[600],
+      backgroundColor: cyan[600],
       '&:hover': {
-        backgroundColor: purple[700],
+        backgroundColor: cyan[800],
       },
         margin: {
-        margin: 50,
+        margin: 60,
     },  
     },
   });
