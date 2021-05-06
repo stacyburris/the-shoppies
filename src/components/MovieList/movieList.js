@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Spinner, Col, Card }from 'react-bootstrap';
+import { Spinner, Col, Card }from 'react-bootstrap';
 import MyButton from '../../Reusables/buttons';
 import './movieList.scss';
 // Spinner creates a loading feature 
