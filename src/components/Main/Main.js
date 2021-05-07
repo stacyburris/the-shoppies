@@ -46,7 +46,7 @@ localStorage.setItem('nominations', JSON.stringify(nominations));
     .catch((error) => {
       console.error('Error:', error);
     })
-    
+    //setMovie('');
 }
 
 
