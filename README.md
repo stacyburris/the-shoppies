@@ -18,15 +18,15 @@ Users can search for their favourite movies and nominate them for the Shopify's 
 
 **Features included** 💡
 
-- Search by movie title from the OMDB API
+- Search by movie title
 - Nominated 5 choices
 - Quick clear search
 - Remove one or more nominations
 - Remove all nominations
-- View nominations
+- See all nominations
 - Error Handling
-- User is told when nominations are complete
-- Movies Sorted by Year
+- Alert when nominations are complete
+- Movies sorted by year
 
 ### Save Nomination List
 
