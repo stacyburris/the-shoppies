@@ -6,7 +6,7 @@ By Stacy Burris 🦋
 </h3>
 <h3 align="center">
 
-Users can search for their favourite movies and nominate them for the Shopify's own personal "Shoppies Awards!"
+Users can search for their favorite movies and nominate them for the Shopify's own personal "Shoppies Awards!"
 
 </h3>
 <h3 align="center">
@@ -23,12 +23,12 @@ Users can search for their favourite movies and nominate them for the Shopify's 
 - Quick clear search
 - Remove one or more nominations
 - Remove all nominations
-- See all nominations
+- See nominations
 - Error Handling
 - Alert when nominations are complete
 - Movies sorted by year
 
-### Save Nomination List
+**Saved Nomination List**
 
 **Don't worry if you accidentally close the tab or refresh it because everything is safely saved to local storage!**
 
@@ -54,11 +54,9 @@ Run localhost
 npm start
 ```
 
-** Most important Have fun!**
-
 ### Testing
 
-## Let's Connect!
+### Let's Connect!
 
 [Portfolio](https://stacys-portfolio.netlify.app/) 👩🏼‍💻
 

@@ -15,7 +15,7 @@ const Footer = () => {
     <div className="Footer" >
       <footer>
         <h3>Made with<span><FontAwesomeIcon 
-        className='heart' icon={farHeart} size="1x" />
+        className='heart' icon={farHeart} size="2x" />
         <span>by Stacy Burris</span></span>
        </h3>
         <div id="site-info">
@@ -28,19 +28,19 @@ const Footer = () => {
        <div className="contact-link">
          <a id="icon" href="https://twitter.com/stacyjaneb"
             className="twitter social">
-            <FontAwesomeIcon icon={faTwitter} size="1x" />
+            <FontAwesomeIcon icon={faTwitter} size="2x" />
           </a>
           <a id="icon" href="https://www.instagram.com/stacyjburris/"
             className="instagram social">
-            <FontAwesomeIcon icon={faInstagram} size="1x" />
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
           </a>
           <a id="icon" href="https://github.com/stacyburris"
             className="github social">
-            <FontAwesomeIcon icon={faGithub} size="1x" />
+            <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
           <a id="icon" href="https://www.linkedin.com/in/stacyjburris/"
             className="linkedin social">
-            <FontAwesomeIcon icon={faLinkedin} size="1x" />
+            <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
           </div>
       </footer>
