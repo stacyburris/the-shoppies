@@ -1,14 +1,17 @@
-$bodyFont: "NetflixSans";
-$bodyFontColor: rgb(15, 14, 14);
+$bodyFont: "Khula", sans-serif;
+$bodyFont2: "Noto Sans", sans-serif;
+$bodyFontColor: rgb(248, 242, 242);
 
 .input-data {
   padding: 5px;
-  padding-bottom: 40px;
   font-family: $bodyFont;
+  font-family: $bodyFont2;
 }
 .title {
   text-align: center;
   font-family: $bodyFont;
+  font-family: $bodyFont2;
+  font-size: 2vw;
   color: $bodyFontColor;
   z-index: 5;
 }
@@ -17,16 +20,42 @@ $bodyFontColor: rgb(15, 14, 14);
   font-size: 2.5vw;
   padding-bottom: 30px;
   font-family: $bodyFont;
+  font-family: $bodyFont2;
 }
 .movie-nominations {
   font-family: $bodyFont;
+  font-family: $bodyFont2;
   color: $bodyFontColor;
 }
 .results {
   font-size: 1.8vw;
 }
 .main-container {
-  //background-color: black;
-  background-image: url("../../Assets/popcorn.svg");
+  background: #34e89e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #34e89e,
+    #0f3443
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #34e89e,
+    #0f3443
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   z-index: 1;
+}
+// .custom {
+//   //border: 2px solid purple;
+//   width: 70vw;
+//   align-items: center;
+//   border-radius: 4px;
+//   .custom:hover {
+//     border-color: rgb(143, 46, 228);
+//   }
+// }
+
+.form-control form-control-warning {
+  border-color: #9431d7;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0px 0px 8px rgba(109, 8, 177, 0.644);
 }

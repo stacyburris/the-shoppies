@@ -92,7 +92,8 @@ return(
                 <Form className='input-data' onSubmit={fetchMovieData}>
                     <Form.Group>
                         <Form.Label className='title'>Welcome To The Movie Awards 🏆</Form.Label>
-                        <Form.Control onChange={movieSearchHandler} value={movieSearch} type='text' placeholder='Type to Search for a Movie...' />
+                        <br/>
+                        <Form.Control className="form-control form-control-warning" onChange={movieSearchHandler} value={movieSearch}  size="lg" type='text' placeholder='Type to Search for a Movie...' />
                     </Form.Group>
                     <MyButton onClick={removeHandler}>
                       Clear Search

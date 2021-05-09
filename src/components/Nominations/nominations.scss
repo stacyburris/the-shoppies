@@ -1,17 +1,24 @@
-$bodyFont: "NetflixSans";
+$bodyFont: "Khula", sans-serif;
+$bodyFont2: "Noto Sans", sans-serif;
 $bodyFontColor: whitesmoke;
 
 .nomination-header {
   font-size: 1.6vw;
   font-family: $bodyFontColor;
+  font-family: $bodyFont;
+  font-family: $bodyFont2;
 }
 .sub-header-nom {
   padding: 5px;
   font-size: 2.5vw;
   padding-bottom: 20px;
   font-family: $bodyFontColor;
+  font-family: $bodyFont;
+  font-family: $bodyFont2;
 }
 .results {
   font-size: 1.8vw;
   padding-bottom: 40px;
+  font-family: $bodyFont;
+  font-family: $bodyFont2;
 }

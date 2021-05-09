@@ -1,38 +1,13 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-@font-face {
-  font-family: "NetflixSans";
-  src: url("./fonts/NetflixSansRegular.woff") format("woff");
-}
-$bodyFont: "NetflixSans";
-
-//.app {
-// background: #ef3b36; /* fallback for old browsers */
-// background: -webkit-linear-gradient(
-//   to bottom,
-//   #ef3b36,
-//   #ffffff
-// ); /* Chrome 10-25, Safari 5.1-6 */
-// background: linear-gradient(
-//   to bottom,
-//   #ef3b36,
-//   #ffffff
-// ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-//background-image: url("./Assets/popcorn.svg");
-// background: #870000; /* fallback for old browsers */
-// background: -webkit-linear-gradient(
-//   to left,
-//   #870000,
-//   #190a05
-// ); /* Chrome 10-25, Safari 5.1-6 */
-// background: linear-gradient(
-//   to left,
-//   #870000,
-//   #190a05
-// ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-//}
+//@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khula:wght@600&family=Noto+Sans&display=swap");
+// @font-face {
+//   font-family: "NetflixSans";
+//   src: url("./fonts/NetflixSansRegular.woff") format("woff");
+// }
+$bodyFont: "Khula", sans-serif;
+$bodyFont2: "Noto Sans", sans-serif;
 
 .jumbotron {
   position: relative;
@@ -59,18 +34,26 @@ $bodyFont: "NetflixSans";
 
 .header {
   font-family: $bodyFont;
-  text-shadow: rgb(19, 18, 18) 0px 0px 6px;
-  font-size: 5vw;
-  padding-left: 60px;
-  padding-bottom: 70px;
-  position: relative;
-  color: whitesmoke;
-  z-index: 2; /* Show content above video */
+  font-family: $bodyFont2;
+  text-shadow: rgb(88, 74, 134) 0px 0px 2px;
+  font-size: 4vw;
+  color: rgb(228, 222, 247);
+  //z-index: 2; /* Show content above video */
 }
-// .film-strip {
-//   height: 40px;
-//   width: 35px;
-// }
+.nav-bar {
+  background-color: #0f3443;
+  //background-color: #061161;
+}
+
 .modal-title {
   font-family: $bodyFont;
+  font-family: $bodyFont2;
 }
+.film-strip {
+  height: 0px;
+  width: 0px;
+  // padding-left: 20px;
+}
+// .MuiSvgIcon-root .film-strip {
+//   width: 40px;
+// }
