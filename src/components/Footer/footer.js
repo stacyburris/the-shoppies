@@ -8,7 +8,7 @@ import {
   faLinkedin,
   faGithub
 } from '@fortawesome/free-brands-svg-icons';
-
+import clip from '../../Assets/pop_corn_black_side.mp4'
 
 const Footer = () => {
   return (

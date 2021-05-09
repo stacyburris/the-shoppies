@@ -1,14 +1,15 @@
-$bodyFont: "Open Sans", sans-serif;
+$bodyFont: "NetflixSans";
+$bodyFontColor: whitesmoke;
 
 .nomination-header {
   font-size: 1.6vw;
-  font-family: $bodyFont;
+  font-family: $bodyFontColor;
 }
 .sub-header-nom {
   padding: 5px;
   font-size: 2.5vw;
   padding-bottom: 20px;
-  font-family: $bodyFont;
+  font-family: $bodyFontColor;
 }
 .results {
   font-size: 1.8vw;

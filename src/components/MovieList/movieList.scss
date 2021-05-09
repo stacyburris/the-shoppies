@@ -1,4 +1,5 @@
-$bodyFont: "Open Sans", sans-serif;
+$bodyFont: "NetflixSans";
+$bodyFontColor: whitesmoke;
 
 .movie-card {
   background: rgb(23, 23, 22);
@@ -9,11 +10,11 @@ $bodyFont: "Open Sans", sans-serif;
   margin-right: 20px;
 
   p {
-    background: rgb(23, 23, 22);
+    //background: rgb(23, 23, 22);
     padding: 0;
     margin: 0;
     line-height: 200%;
-    color: whitesmoke;
+    color: $bodyFontColor;
   }
   .nominate {
     padding: 5px;

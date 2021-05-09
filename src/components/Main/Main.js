@@ -86,7 +86,7 @@ const sortMovies = movies.sort((a,b) => a.Year - b.Year)
 // Nomination Component
 return(
   
-  <div>
+  <div className='main-container'>
            {nominations.length === 5 ? <NominationsComplete/> : ''}
             <Container>
                 <Form className='input-data' onSubmit={fetchMovieData}>

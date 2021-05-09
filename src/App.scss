@@ -1,30 +1,76 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP&family=Nunito&family=Open+Sans&display=swap");
-$bodyFont: "Open Sans", sans-serif;
-.app {
-  background: rgb(23, 23, 22);
-  color: whitesmoke;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@font-face {
+  font-family: "NetflixSans";
+  src: url("./fonts/NetflixSansRegular.woff") format("woff");
 }
+$bodyFont: "NetflixSans";
+
+//.app {
+// background: #ef3b36; /* fallback for old browsers */
+// background: -webkit-linear-gradient(
+//   to bottom,
+//   #ef3b36,
+//   #ffffff
+// ); /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(
+//   to bottom,
+//   #ef3b36,
+//   #ffffff
+// ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+//background-image: url("./Assets/popcorn.svg");
+// background: #870000; /* fallback for old browsers */
+// background: -webkit-linear-gradient(
+//   to left,
+//   #870000,
+//   #190a05
+// ); /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(
+//   to left,
+//   #870000,
+//   #190a05
+// ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//}
+
 .jumbotron {
-  background: rgb(23, 23, 22);
-  background-image: url("./Assets/filmstrip.png");
-  background-size: cover;
-  background-repeat: inherit;
-  .header {
-    font-family: "Lato", sans-serif;
-    font-family: "Noto Sans JP", sans-serif;
-    font-family: "Nunito", sans-serif;
-    font-size: 5vw;
-    padding-left: 110px;
-    background-color: transparent;
-  }
-  .film-strip {
-    height: 40px;
-    width: 35px;
-    background-color: transparent;
-  }
-  .modal-title {
-    font-family: $bodyFont;
-  }
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  padding: 0;
+  margin: 0;
+  line-height: 200%;
+}
+
+#video-background {
+  position: absolute;
+  height: auto;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.header {
+  font-family: $bodyFont;
+  text-shadow: rgb(19, 18, 18) 0px 0px 6px;
+  font-size: 5vw;
+  padding-left: 60px;
+  padding-bottom: 70px;
+  position: relative;
+  color: whitesmoke;
+  z-index: 2; /* Show content above video */
+}
+// .film-strip {
+//   height: 40px;
+//   width: 35px;
+// }
+.modal-title {
+  font-family: $bodyFont;
 }

@@ -4,6 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './fonts/NetflixSansRegular.woff';
+import './Assets/pop_corn_black_side.mp4';
 
 ReactDOM.render(
   <React.StrictMode>

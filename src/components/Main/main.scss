@@ -1,4 +1,5 @@
-$bodyFont: "Open Sans", sans-serif;
+$bodyFont: "NetflixSans";
+$bodyFontColor: rgb(15, 14, 14);
 
 .input-data {
   padding: 5px;
@@ -8,15 +9,24 @@ $bodyFont: "Open Sans", sans-serif;
 .title {
   text-align: center;
   font-family: $bodyFont;
+  color: $bodyFontColor;
+  z-index: 5;
 }
 .sub-header {
+  color: $bodyFontColor;
   font-size: 2.5vw;
   padding-bottom: 30px;
   font-family: $bodyFont;
 }
 .movie-nominations {
   font-family: $bodyFont;
+  color: $bodyFontColor;
 }
-.results{
-    font-size: 1.8vw;
+.results {
+  font-size: 1.8vw;
+}
+.main-container {
+  //background-color: black;
+  background-image: url("../../Assets/popcorn.svg");
+  z-index: 1;
 }
