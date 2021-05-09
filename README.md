@@ -14,7 +14,7 @@ Users can search for their favorite movies and nominate them for the Shopify's o
   <a href="https://the-shoppie.netlify.app/">Click here to check out the app 🔗</a>
 </h3>
 
-![Demo](src/Assets/sitedemo.gif)
+![Demo](src/Assets/demo-site.gif)
 
 **Features included** 💡
 
