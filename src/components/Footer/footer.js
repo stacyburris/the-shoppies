@@ -15,13 +15,13 @@ const Footer = () => {
     <div className="Footer" >
       <footer>
         <h3>Made with<span><FontAwesomeIcon 
-        className='heart' icon={farHeart} size="2x" />
+        className='heart' icon={farHeart} size="1x" />
         <span>by Stacy Burris</span></span>
        </h3>
         <div id="site-info">
         <p id="Footer">
           <p>Connect With Me</p>
-          <MyButton><a
+          <MyButton ><a className='link-color' id='link-color'
        href="mailto:stacy1burris@gmail.com">Email</a></MyButton>
            </p>
         </div>

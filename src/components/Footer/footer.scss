@@ -1,16 +1,10 @@
-$bodyFont: "NetflixSans";
-$bodyFontColor: whitesmoke;
 .Footer {
-  background-color: #190a05;
-  color: $bodyFontColor;
-  background-image: url("../../Assets/popcorn.svg");
+  background-color: #34e89e;
   a {
     text-decoration: none;
-    color: $bodyFontColor;
   }
   #site-info {
     text-align: center;
-    font-family: $bodyFont;
     font-weight: 500;
     font-style: normal;
     font-size: 15px;
@@ -19,9 +13,8 @@ $bodyFontColor: whitesmoke;
   h3 {
     text-align: center;
     font-size: 15px;
-    padding-top: 180px;
+    padding-top: 80px;
     padding-bottom: 5px;
-    font-family: $bodyFont;
   }
   .heart {
     margin: 0px 6px 0px 6px;
@@ -29,9 +22,13 @@ $bodyFontColor: whitesmoke;
 }
 #icon {
   margin: 20px 10px 20px 10px;
+  color: black;
 }
 .contact-link {
   text-align: center;
-  margin-top: 20px;
   padding-bottom: 30px;
+}
+
+.link-color {
+  color: whitesmoke;
 }

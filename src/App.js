@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from './components/Main/Main'; // imports main components where API is called
-import {Jumbotron } from 'react-bootstrap'; // Bootstrap to create the header container 
+import {Jumbotron, Navbar } from 'react-bootstrap'; // Bootstrap to create the header container 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import MovieFilterIcon from '@material-ui/icons/MovieFilter'; // Material UI Icon
@@ -13,13 +13,19 @@ const App = () => {
   return (
     <>
     <div className='app'>
+    <Navbar className='nav-bar'>
+    {/* <Navbar.Brand> */}
+        <h2 className='header'>  
+     <MovieFilterIcon className='film-strip'/>
+      The Shoppies
+        </h2> 
+      {/* </Navbar.Brand> */}
+
+    </Navbar>
       <Jumbotron className='jumbotron'> 
          <video id='video-background' controls autoPlay loop muted>
           <source src={clip} type="video/mp4" controls="controls" autoplay="true" ></source>
           </video>
-              <h1 className='header'>
-          <MovieFilterIcon className='film-strip' inherit='large'/>The Shoppies
-        </h1>
       </Jumbotron>
       <Main />
     
