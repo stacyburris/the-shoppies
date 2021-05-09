@@ -2,7 +2,6 @@ import React from 'react';
 import { Spinner, Col, Card }from 'react-bootstrap';
 import MyButton from '../../Reusables/buttons';
 import './movieList.scss';
-// Spinner creates a loading feature 
 
 const MovieList = (props) => {
 	// movie = passed (movie)
@@ -16,8 +15,8 @@ const MovieList = (props) => {
 	return(
 		<div>
 			{movie ?
-			<Col>
-			<Card className='movie-card' style={{ width: '15rem' }} bg='dark' text='dark'>
+			<Col className='movie-container'>
+			<Card className='movie-card' bg='secondary' text='light' style={{ width: '15rem' }}>
 			<Card.Img
                             width={70}
                             height={285}
@@ -26,7 +25,7 @@ const MovieList = (props) => {
                             alt={movie.Title}
                         />
                         <Card.Text>{movie.Title}</Card.Text>
-                        <Card.Text>Release Year:<i> {movie.Year}</i></Card.Text>
+                        <Card.Text><i> {movie.Year}</i></Card.Text>
                         {nominations.includes(movie) || nominations.length === 5 ? 
                             <MyButton disabled >Nominated</MyButton>
                             : 

@@ -2,11 +2,12 @@ $bodyFont: "Khula", sans-serif;
 $bodyFont2: "Noto Sans", sans-serif;
 
 .MuiButton-label {
-  //color: whitesmoke;
   font-family: $bodyFont;
   font-family: $bodyFont2;
   text-shadow: rgb(88, 74, 134) 0px 0px 1px;
   color: rgb(238, 235, 247);
   font-family: "Khula", sans-serif;
   font-family: "Noto Sans", sans-serif;
+  padding: 2px;
+  margin: 1px;
 }

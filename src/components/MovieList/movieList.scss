@@ -2,19 +2,15 @@ $bodyFont: "NetflixSans";
 $bodyFontColor: whitesmoke;
 
 .movie-card {
-  background: rgb(23, 23, 22);
   padding: 0;
-  margin: 0;
   line-height: 200%;
   text-align: center;
-  margin-right: 20px;
+  margin-right: 10px;
 
   p {
-    //background: rgb(23, 23, 22);
     padding: 0;
     margin: 0;
     line-height: 200%;
-    color: $bodyFontColor;
   }
   .nominate {
     padding: 5px;

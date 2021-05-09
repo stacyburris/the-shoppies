@@ -11,30 +11,7 @@ import './buttons.scss';
       '&:hover': {
         backgroundColor: deepPurple[700],
       },
-        margin: {
-        margin: 60,
-    },  
     },
-    // root: {
-    //   color: pink[200],
-    //   backgroundColor: pink[200],
-    //   '&:hover': {
-    //     backgroundColor: pink[400],
-    //   },
-    //     margin: {
-    //     margin: 60,
-    // },  
-    // },
-    // root: {
-    //   color: purple[400],
-    //   backgroundColor: purple[400],
-    //   '&:hover': {
-    //     backgroundColor: purple[700],
-    //   },
-    //     margin: {
-    //     margin: 60,
-    // },  
-    // },
   });
 
 function MyButton(props){
