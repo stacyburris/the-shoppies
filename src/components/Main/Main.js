@@ -72,7 +72,7 @@ const removeNominatedMovie = (movie) => {
   );
   setNominations(newNominatedList);
   }
-// Sorts Movies By Year
+
 const sortMovies = movies.sort((a,b) => a.Year - b.Year)
 //console.log({movies}, {sortMovies})
 

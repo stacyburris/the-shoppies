@@ -2,7 +2,6 @@ import React from 'react'
 import { Media } from 'react-bootstrap'
 import MyButton from '../../Reusables/buttons';
 import './nominations.scss';
-//import '../../App.scss';
 
 
 const Nominations = (props) => {
@@ -17,14 +16,14 @@ const Nominations = (props) => {
  // Ability to Clear Nominations with One Click
  // Map over Nominations and Display or Remove Nomination
     return(
-        <div>
+        <div className='nom-container'>
             <h2 className='sub-header-nom'>Nominations {nominations.length >= 1 ? <MyButton onClick={clearNominations}>
-                      Clear Nominations</MyButton> : null }</h2>
+            Clear Nominations</MyButton> : null }</h2>
 
             {nominationsLeft > 0 ? 
-                <h4 className='results'>You have {nominationsLeft} {nominationsLeft === 1 ? 'nomination' : 'nominations'} left</h4>
+                <h4 id='results'>You have {nominationsLeft} {nominationsLeft === 1 ? 'nomination' : 'nominations'} left</h4>
                 :
-                <h4 className='results'>You Nominated 5 Movies!</h4>
+                <h4 id='results'>You Nominated 5 Movies!</h4>
             } 
 
             {nominations.length > 0 ?
@@ -33,6 +32,7 @@ const Nominations = (props) => {
                         <Media>
                             <img
                                 width={75}
+                                height={90}
                                 className="mr-3"
                                 src={nominate.Poster}
                                 alt={nominate.Title}

@@ -2,23 +2,25 @@ $bodyFont: "Khula", sans-serif;
 $bodyFont2: "Noto Sans", sans-serif;
 $bodyFontColor: whitesmoke;
 
+.nom-container {
+  width: auto;
+}
 .nomination-header {
-  font-size: 1.6vw;
+  font-size: 1.8vw;
   font-family: $bodyFontColor;
   font-family: $bodyFont;
   font-family: $bodyFont2;
+  padding: 0px 5px 5px 0px;
 }
 .sub-header-nom {
-  padding: 5px;
-  font-size: 2.5vw;
-  padding-bottom: 20px;
+  padding: 30px 0px 20px 0px;
   font-family: $bodyFontColor;
   font-family: $bodyFont;
   font-family: $bodyFont2;
 }
-.results {
-  font-size: 1.8vw;
-  padding-bottom: 40px;
+#results {
+  font-size: 2vw;
+  padding-bottom: 20px;
   font-family: $bodyFont;
   font-family: $bodyFont2;
 }

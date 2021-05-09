@@ -28,6 +28,10 @@ Users can search for their favorite movies and nominate them for the Shopify's o
 - Alert when nominations are complete
 - Movies sorted by year
 
+**Future Features**
+
+- Pagination
+
 **Saved Nomination List**
 
 **Don't worry if you accidentally close the tab or refresh it because everything is safely saved to local storage!**

@@ -14,11 +14,12 @@ $bodyFontColor: rgb(248, 242, 242);
   font-size: 2vw;
   color: $bodyFontColor;
   z-index: 5;
+  padding: 20px 0px 10px 0px;
 }
 .sub-header {
   color: $bodyFontColor;
   font-size: 2.5vw;
-  padding-bottom: 30px;
+  padding: 30px 0px 30px 0px;
   font-family: $bodyFont;
   font-family: $bodyFont2;
 }
@@ -43,19 +44,4 @@ $bodyFontColor: rgb(248, 242, 242);
     #0f3443
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   z-index: 1;
-}
-// .custom {
-//   //border: 2px solid purple;
-//   width: 70vw;
-//   align-items: center;
-//   border-radius: 4px;
-//   .custom:hover {
-//     border-color: rgb(143, 46, 228);
-//   }
-// }
-
-.form-control form-control-warning {
-  border-color: #9431d7;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset,
-    0px 0px 8px rgba(109, 8, 177, 0.644);
 }
