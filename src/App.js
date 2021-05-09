@@ -14,13 +14,10 @@ const App = () => {
     <>
     <div className='app'>
     <Navbar className='nav-bar'>
-    {/* <Navbar.Brand> */}
         <h2 className='header'>  
      <MovieFilterIcon className='film-strip'/>
       The Shoppies
         </h2> 
-      {/* </Navbar.Brand> */}
-
     </Navbar>
       <Jumbotron className='jumbotron'> 
          <video id='video-background' controls autoPlay loop muted>
@@ -37,8 +34,3 @@ const App = () => {
 export default App;
 
 
-
-
-{/* <video className='videoTag' autoPlay loop muted>
-<source src={clip} type='video/mp4' />
-</video> */}
