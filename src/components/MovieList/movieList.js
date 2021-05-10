@@ -17,7 +17,7 @@ const MovieList = (props) => {
 			{movie ?
 			<Col className='movie-container'>
 			<Card className='movie-card' bg='secondary' text='light' style={{ width: '15rem' }}>
-			<Card.Img
+			<Card.Img 
                             width={70}
                             height={285}
                             className="mr-3"
@@ -25,7 +25,7 @@ const MovieList = (props) => {
                             alt={movie.Title}
                         />
                         <Card.Text>{movie.Title}</Card.Text>
-                        <Card.Text><i> {movie.Year}</i></Card.Text>
+                        <Card.Text><i> ({movie.Year})</i></Card.Text>
                         {nominations.includes(movie) || nominations.length === 5 ? 
                             <MyButton disabled >Nominated</MyButton>
                             : 

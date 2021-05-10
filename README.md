@@ -14,7 +14,7 @@ Users can search for their favorite movies and nominate them for the Shopify's o
   <a href="https://the-shoppie.netlify.app/">Click here to check out the app 🔗</a>
 </h3>
 
-![Demo](src/Assets/demo-site.gif)
+![Demo](src/Assets/demo.gif)
 
 **Features included** 💡
 
@@ -24,7 +24,7 @@ Users can search for their favorite movies and nominate them for the Shopify's o
 - Remove one or more nominations
 - Remove all nominations
 - See nominations
-- Error Handling
+- Error handling
 - Alert when nominations are complete
 - Movies sorted by year
 
@@ -42,6 +42,7 @@ Technologies 💻
 - Material UI
 - Bootstrap
 - Local Storage
+- SASS/SCSS
 - [OMDB API](http://www.omdbapi.com/)
 
 ### Developer Setup 🔧
@@ -58,7 +59,11 @@ Run localhost
 npm start
 ```
 
-### Testing
+### Testing with React & Jest
+
+```
+npm test
+```
 
 ### Let's Connect!
 
