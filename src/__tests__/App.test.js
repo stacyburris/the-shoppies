@@ -1,13 +1,10 @@
-import 'jest-styled-components';
+// import 'jest-styled-components';
 import Main from '../components/Main/Main';
 import { render } from "@testing-library/react";
 import '@testing-library/jest-dom';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../App';
-//import { MyButton } from '../Reusables/buttons';
-//import Main from '../components/Main/Main';
-
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -18,7 +15,7 @@ it('renders without crashing', () => {
 //     render(<App/>);
 //     const onClick = jest.fn();
 //     const { getByText } = render(<MyButton onClick={removeHandler} />);
-  
+
 //     fireEvent.click(getByText(i));
 //     expect(onClick).toHaveBeenCalled();
 //   });
