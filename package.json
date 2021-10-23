@@ -27,7 +27,7 @@
     "react-paginate": "^7.1.2",
     "react-scripts": "4.0.3",
     "react-test-renderer": "^17.0.1",
-    "sass": "^1.32.12",
+    "sass": "^1.42.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
