@@ -18,7 +18,7 @@
     "add": "^2.0.6",
     "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.4.1",
-    "jest-localstorage-mock": "^2.4.6",
+    "jest-localstorage-mock": "^2.4.18",
     "jest-styled-components": "^7.0.3",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
